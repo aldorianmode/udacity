@@ -1,9 +1,10 @@
 .header {
     background-color: skyblue;
+    grid-area: header;
     width: 100%;
     padding: 1em;
     margin-bottom: 2rem;
-    min-height: 18vh;
+    min-height: 10vh;
     border: 2px solid black;
     text-align: center;
 }
@@ -11,7 +12,8 @@
 .header-icon {
     display: inline-block;
     vertical-align: middle;
-    border: 2px solid yellow;    
+    border: 2px solid yellow;
+    content: url('https://img.icons8.com/color/48/000000/around-the-globe.png');   
 }
 
 .header-title {

@@ -10,8 +10,14 @@ body {
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
+h1 {
+    letter-spacing: 0.5em;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgb(1,1,1);
+}
+
 .container {
-    margin: auto;
     display: grid;
     grid-template-rows: 30% 60% 10%;
     grid-template-areas:
