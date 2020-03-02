@@ -1,28 +1,21 @@
 .header {
     background-color: skyblue;
     width: 100%;
-    grid-area: "header";
     padding: 1em;
     margin-bottom: 2rem;
-    min-height: 25vh;
+    min-height: 18vh;
     border: 2px solid black;
+    text-align: center;
 }
 
-.header-flex {
-    display: inline-grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 20% 80%;
-    grid-template-areas: "icon title";
+.header-icon {
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid yellow;    
 }
 
-.header-flex-icon {
-    border: 2px solid yellow;
-    grid-area: icon;
-    
-}
-
-.header-flex-title {
+.header-title {
+    display: inline-block;
+    vertical-align: middle;
     border: 2px solid red;
-    grid-area: title;
 }
