@@ -1,14 +1,14 @@
 .header {
     background-color: skyblue;
     grid-area: header;
-    width: 100%;
     padding: 1em;
     margin-bottom: 2rem;
-    min-height: 10vh;
+    min-height: 9vh;
     border: 2px solid black;
     text-align: center;
 }
 
+/*TODO: change icon size for larger screens*/
 .header-icon {
     display: inline-block;
     vertical-align: middle;
