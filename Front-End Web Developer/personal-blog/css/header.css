@@ -2,7 +2,6 @@
     background-color: skyblue;
     grid-area: header;
     padding: 1em;
-    margin-bottom: 2rem;
     min-height: 9vh;
     border: 2px solid black;
     text-align: center;

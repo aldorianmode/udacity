@@ -5,13 +5,17 @@
 html {
     font-family: "Open Sans", arial, sans-serif;
     width: 100%;
+    height: 100%;
+    border: 2px solid green;
 }
 
 body {
     background-color: #fafbfc;
     color: #2e3d49;
     font-family: Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
     margin: auto;
+    border: 2px solid orange;
 }
 
 h1 {
@@ -22,8 +26,11 @@ h1 {
 }
 
 .container {
+    border: 2px solid brown;
+    height: 100%;
     display: grid;
-    grid-template-rows: 30% 60% 10%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "header"
         "content"
