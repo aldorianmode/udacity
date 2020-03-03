@@ -18,7 +18,6 @@
 }
 
 .card-img {
-    border: 2px solid green;
     grid-area: image;
 }
 
@@ -31,7 +30,6 @@
 /* Add some padding inside the card container */
 .card-description {
     padding: 2px 16px;
-    border: 2px solid yellow;
     grid-area: description;
     text-align: center;
 }
