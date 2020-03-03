@@ -2,7 +2,7 @@
     background-color: skyblue;
     grid-area: header;
     padding: 1em;
-    min-height: 15vh;
+    min-height: 10vh;
     border: 2px solid black;
     text-align: center;
 }
