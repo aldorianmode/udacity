@@ -1,0 +1,39 @@
+.blog-post-container {
+    border: 2px solid brown;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "content"
+        "author";
+}
+
+.blog-post-content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.blog-post-content p {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.blog-post-content figure {
+    text-align: center;
+}
+
+.blog-post-content img {
+    width: 250px;
+    height: 250px;
+}
+
+.blog-post-author {
+    grid-area: author;
+}
+
+/* Add breakpoint for blog-post-content and display in columns for larger screens */

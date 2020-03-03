@@ -1,5 +1,7 @@
 @import url(../css/header.css);
-@import url(../css/content.css);
+@import url(../css/blog-index.css);
+@import url(../css/blog-post.css);
+@import url(../css/author.css);
 @import url(../css/footer.css);
 
 html {
@@ -36,6 +38,19 @@ h1 {
         "content"
         "footer";
 }
+
+.blog-post-container {
+    border: 2px solid brown;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "content"
+        "author";
+}
+
 
 
 /*TODO: Add breakpoints for mid and large screens*/
