@@ -1,7 +1,6 @@
 .footer {
-    background-color: skyblue;
     grid-area: footer;
-    padding: 1em;
-    min-height: 3vh;
-    border: 2px solid black;
+    min-height: 1vh;
+    border-top: 2px solid skyblue;
+    text-align: center;
 }
