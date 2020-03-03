@@ -1,4 +1,10 @@
+@import url(../css/cards.css);
+
 .blog-content {
     grid-area: content;
     border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;    
 }
