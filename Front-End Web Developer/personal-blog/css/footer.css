@@ -1,12 +1,9 @@
 .footer {
     grid-area: footer;
     min-height: 1vh;
-    border-top: 2px solid skyblue;
+    margin: 1vh 1vw 1vh 1vw;
+    border-top: 2px solid #dbe2e8;
     text-align: center;
-}
-
-
-.footer > h2 {
     letter-spacing: 0.5em;
     font-size: 8px;
     text-transform: uppercase;
