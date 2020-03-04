@@ -1,16 +1,13 @@
 .header {
-    background-color: skyblue;
     grid-area: header;
+    box-sizing: border-box;
     padding: 1em;
     min-height: 10vh;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-}
-
-.header-title {
-    display: inline-block;
-    vertical-align: middle;
-    border: 2px solid red;
 }
 
 .header-sky-background {
@@ -24,5 +21,5 @@
     background-image: url('../images/thailand_beach_header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: center;
+    background-position-y: 55%;
 }

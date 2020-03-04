@@ -1,5 +1,17 @@
 @import url(../css/cards.css);
 
+.blog-container {
+    border: 2px solid brown;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+}
+
 .blog-content {
     grid-area: content;
     display: flex;
@@ -9,3 +21,4 @@
     padding-left: 7vw;
     padding-right: 7vw;
 }
+

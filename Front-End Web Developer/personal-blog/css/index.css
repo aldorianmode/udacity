@@ -42,17 +42,4 @@ h3 {
     text-shadow: 0 0 1px rgb(1,1,1);
 }
 
-.blog-container {
-    border: 2px solid brown;
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "header"
-        "content"
-        "footer";
-}
-
-
 /*TODO: Add breakpoints for mid and large screens*/
