@@ -7,22 +7,21 @@
     text-align: center;
 }
 
-/*TODO: change icon size for larger screens*/
-.header-icon {
-    display: inline-block;
-    vertical-align: middle;
-    border: 2px solid yellow;
-    content: url('https://img.icons8.com/color/48/000000/around-the-globe.png');   
-}
-
 .header-title {
     display: inline-block;
     vertical-align: middle;
     border: 2px solid red;
 }
 
+.header-sky-background {
+    background-image: url('../images/sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 11%;
+}
+
 .header-thailand-background {
-    background-image: url('../images/thailand_beach.jpg');
+    background-image: url('../images/thailand_beach_header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
