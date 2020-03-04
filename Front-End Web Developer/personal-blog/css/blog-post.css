@@ -28,12 +28,43 @@
 }
 
 .blog-post-content img {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
 }
 
 .blog-post-author {
     grid-area: author;
+    border-top: 2px solid #dbe2e8;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+.blog-post-author aside {
+    margin: 1vh 2vw 1vh 2vw;
+}
+
+.blog-post-author img {
+    width: 25vw;
+    height: 25vw;
+}
+
+.blog-post-author-social {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.blog-post-author-social > a {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+}
+
+.blog-post-author-social > img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Add breakpoint for blog-post-content and display in columns for larger screens */
