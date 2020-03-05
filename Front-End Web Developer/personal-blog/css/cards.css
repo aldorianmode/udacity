@@ -16,6 +16,7 @@
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.726);
+    color: #4479a4;
 }
 
 .card > a {
@@ -36,7 +37,12 @@
 
 /* Add some padding inside the card container */
 .card-description {
-    padding: 2px 16px;
     grid-area: description;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-description > *{
+    font-size: 15px;
 }
