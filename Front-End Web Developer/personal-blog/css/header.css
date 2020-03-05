@@ -3,7 +3,6 @@
     box-sizing: border-box;
     padding: 1em;
     min-height: 25vw;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,14 +18,14 @@
 }
 
 .header-sky-background {
-    background-image: url('../images/sky.jpg');
+    background-image: url('../img/sky.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 11%;
 }
 
 .header-thailand-background {
-    background-image: url('../images/thailand_beach_header.jpg');
+    background-image: url('../img/thailand_beach_header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 55%;

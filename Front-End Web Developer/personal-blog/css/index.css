@@ -8,7 +8,6 @@ html {
     font-family: "Open Sans", arial, sans-serif;
     width: 100%;
     height: 100%;
-    border: 2px solid green;
 }
 
 body {
@@ -17,7 +16,6 @@ body {
     font-family: Georgia, Times, 'Times New Roman', serif;
     height: 100%;
     margin: auto;
-    border: 2px solid orange;
 }
 
 h1,

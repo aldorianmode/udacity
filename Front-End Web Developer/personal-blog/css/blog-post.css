@@ -1,5 +1,4 @@
 .blog-post-container {
-    border: 2px solid brown;
     height: 100%;
     display: grid;
     grid-template-rows: auto auto 1fr auto auto;
@@ -82,5 +81,3 @@
     width: 100%;
     height: 100%;
 }
-
-/* Add breakpoint for blog-post-content and display in columns for larger screens */
