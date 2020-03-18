@@ -41,8 +41,23 @@
  * 
 */
 
-// build the nav
+/**
+ * Navigation Bar build
+ */
+// Get all sections
+const sections = document.getElementsByTagName('section');
+// Create navigation list content fragment
+let navListContent = document.createDocumentFragment();
 
+for (const section of sections) {
+    let navListElement = document.createElement('li');
+    navListElement.textContent = section.dataset.nav;
+    navListElement.className = "menu__link";
+    navListContent.appendChild(navListElement);
+}
+
+const navList = document.getElementById("navbar__list");
+navList.appendChild(navListContent);
 
 // Add class 'active' to section when near top of viewport
 
