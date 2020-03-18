@@ -25,7 +25,8 @@
  * Define Global Variables
  * 
 */
-
+// Get all sections
+const sections = document.getElementsByTagName('section');
 
 /**
  * End Global Variables
@@ -44,8 +45,7 @@
 /**
  * Navigation Bar build
  */
-// Get all sections
-const sections = document.getElementsByTagName('section');
+
 // Create navigation list content fragment
 let navListContent = document.createDocumentFragment();
 
