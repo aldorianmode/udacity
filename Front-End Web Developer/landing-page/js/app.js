@@ -13,6 +13,14 @@
  * 
 */
 
+/** 
+*   TODO:
+*       - Get all sections from the DOM and save them into an array or object
+*       - The Nav Bar will create a <ul> from it
+*       - The Nav Bar will have all sections listed and each element list will have a scroll event to move the viewport to it
+*       - The Nav Bar content has to be added with the DocumentFragment for performance
+*/
+
 /**
  * Define Global Variables
  * 
