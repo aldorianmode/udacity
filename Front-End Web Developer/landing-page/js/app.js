@@ -27,6 +27,7 @@
 */
 // Get all sections
 const sections = document.getElementsByTagName('section');
+const header = document.querySelector('header.page__header');
 
 /**
  * End Global Variables
@@ -34,6 +35,17 @@ const sections = document.getElementsByTagName('section');
  * 
 */
 
+function getAllSectionsTopViewport() {
+    const ret = [];
+    for (const section of sections) {
+        // Distance between section's top to viewport's top
+        const sectionTopToViewport = section.getBoundingClientRect().top;
+        // Offset = Nav. header's height
+        const offset = header.getBoundingClientRect().height;
+        ret.push(Math.abs(sectionTopToViewport - offset));
+    }
+    return ret;
+}
 
 
 /**
@@ -59,8 +71,28 @@ for (const section of sections) {
 const navList = document.getElementById("navbar__list");
 navList.appendChild(navListContent);
 
-// Add class 'active' to section when near top of viewport
+/*
 
+const observerOptions = {
+    root: null,     // viewport
+    threshold: 0,   // as soon as even one pixel is visible, the callback will be run
+};
+
+function sectionsObserverCallback(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            console.log(`Intersecting -> ${entry.target.id}`);
+        } else {
+            console.log(`Not intersecting -> ${entry.target.id}`);
+        }
+    });
+};
+
+let sectionsObserver = new IntersectionObserver(sectionsObserverCallback, observerOptions);
+for (const section of sections) {
+    sectionsObserver.observe(section);
+}
+*/
 
 // Scroll to anchor ID using scrollTO event
 
@@ -71,7 +103,21 @@ navList.appendChild(navListContent);
  * 
 */
 
-// Build menu 
+// Add class 'active' to section when near top of viewport
+window.addEventListener("scroll", event => {
+    const allSectionsTopViewport = getAllSectionsTopViewport();
+    const indexActiveSection = allSectionsTopViewport.indexOf(Math.min.apply(Math, allSectionsTopViewport));
+    let index = 0;
+    for(let section of sections) {
+        if (index === indexActiveSection) {
+            section.classList.add('your-active-class');
+        } else {
+            section.classList.remove('your-active-class');
+        }
+        index++;
+    };
+});
+
 
 // Scroll to section on link click
 
