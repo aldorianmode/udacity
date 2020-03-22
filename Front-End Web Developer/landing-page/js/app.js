@@ -25,9 +25,9 @@
  * Define Global Variables
  * 
 */
-// Get all sections
-const sections = document.getElementsByTagName('section');
 const header = document.querySelector('header.page__header');
+const navList = document.getElementById("navbar__list");
+const sections = document.getElementsByTagName('section');
 
 /**
  * End Global Variables
@@ -65,34 +65,11 @@ for (const section of sections) {
     let navListElement = document.createElement('li');
     navListElement.textContent = section.dataset.nav;
     navListElement.className = "menu__link";
+    // data-navlink used for scroll to section when clicked
+    navListElement.setAttribute("data-navlink", section.id);
     navListContent.appendChild(navListElement);
 }
-
-const navList = document.getElementById("navbar__list");
 navList.appendChild(navListContent);
-
-/*
-
-const observerOptions = {
-    root: null,     // viewport
-    threshold: 0,   // as soon as even one pixel is visible, the callback will be run
-};
-
-function sectionsObserverCallback(entries, observer) {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            console.log(`Intersecting -> ${entry.target.id}`);
-        } else {
-            console.log(`Not intersecting -> ${entry.target.id}`);
-        }
-    });
-};
-
-let sectionsObserver = new IntersectionObserver(sectionsObserverCallback, observerOptions);
-for (const section of sections) {
-    sectionsObserver.observe(section);
-}
-*/
 
 // Scroll to anchor ID using scrollTO event
 
@@ -102,7 +79,6 @@ for (const section of sections) {
  * Begin Events
  * 
 */
-
 // Add class 'active' to section when near top of viewport
 window.addEventListener("scroll", event => {
     const allSectionsTopViewport = getAllSectionsTopViewport();
@@ -118,9 +94,12 @@ window.addEventListener("scroll", event => {
     };
 });
 
-
 // Scroll to section on link click
-
-// Set sections as active
+navList.addEventListener('click', (e) => {
+    e.preventDefault();
+    const clickedNavOption = e.target;
+    const section = document.getElementById(clickedNavOption.dataset.navlink);
+    section.scrollIntoView();
+});
 
 
