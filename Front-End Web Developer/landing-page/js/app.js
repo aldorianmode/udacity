@@ -13,14 +13,6 @@
  * 
 */
 
-/** 
-*   TODO:
-*       - Get all sections from the DOM and save them into an array or object
-*       - The Nav Bar will create a <ul> from it
-*       - The Nav Bar will have all sections listed and each element list will have a scroll event to move the viewport to it
-*       - The Nav Bar content has to be added with the DocumentFragment for performance
-*/
-
 /**
  * Define Global Variables
  * 
@@ -34,7 +26,7 @@ const sections = document.getElementsByTagName('section');
  * Start Helper Functions
  * 
 */
-
+// Get absolute distances of all sections between viewport's top less the height of the navigation bar
 function getAllSectionsTopViewport() {
     const ret = [];
     for (const section of sections) {
@@ -75,9 +67,6 @@ for (const section of sections) {
 }
 navList.appendChild(navListContent);
 
-// Scroll to anchor ID using scrollTO event
-
-
 /**
  * End Main Functions
  * Begin Events
@@ -101,7 +90,6 @@ window.addEventListener("scroll", event => {
 /*
 // Scroll to section on link click
 navList.addEventListener('click', (e) => {
-    e.preventDefault();
     const clickedNavOption = e.target;
     const section = document.getElementById(clickedNavOption.dataset.navlink);
     section.scrollIntoView();
