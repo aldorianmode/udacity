@@ -63,10 +63,14 @@ let navListContent = document.createDocumentFragment();
 
 for (const section of sections) {
     let navListElement = document.createElement('li');
-    navListElement.textContent = section.dataset.nav;
-    navListElement.className = "menu__link";
-    // data-navlink used for scroll to section when clicked
-    navListElement.setAttribute("data-navlink", section.id);
+    let navListElementLink = document.createElement('a');
+    navListElementLink.className = "menu__link";
+    navListElementLink.setAttribute("href", `#${section.id}`);    
+    navListElementLink.textContent = section.dataset.nav;
+    // If scroll to sections is done with events, this attribute is used to know to whick element we must scroll in click
+    // event callback
+    //navListElementLink.setAttribute("data-navlink", section.id);
+    navListElement.appendChild(navListElementLink);
     navListContent.appendChild(navListElement);
 }
 navList.appendChild(navListContent);
@@ -94,6 +98,7 @@ window.addEventListener("scroll", event => {
     };
 });
 
+/*
 // Scroll to section on link click
 navList.addEventListener('click', (e) => {
     e.preventDefault();
@@ -101,5 +106,5 @@ navList.addEventListener('click', (e) => {
     const section = document.getElementById(clickedNavOption.dataset.navlink);
     section.scrollIntoView();
 });
-
+*/
 
