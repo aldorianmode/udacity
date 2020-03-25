@@ -67,6 +67,18 @@ section {
 
 /* ---- Module Rules ---- */
 
+.to-top-button {
+    position: fixed;
+    margin: 1em;
+    top: 70px;
+    cursor: pointer;
+    display: none;  /* Don't show button at first*/
+    z-index: 5;
+    padding: 1em;
+    width: fit-content;
+    background: #84a9ac;
+}
+
 /* Navigation Styles*/
 .navbar__menu ul {
     padding-left: 0;

@@ -20,6 +20,7 @@
 const header = document.querySelector('header.page__header');
 const navList = document.getElementById("navbar__list");
 const sections = document.getElementsByTagName('section');
+const toTopButton = document.getElementById("toTopButton");
 
 /**
  * End Global Variables
@@ -92,8 +93,16 @@ window.addEventListener("scroll", event => {
         }
         index++;
     };
+
+    const viewportHeight = window.innerHeight;
+    const documentViewportTopPos = document.documentElement.getBoundingClientRect().top;
+    const showTopButton = Math.abs(documentViewportTopPos) > viewportHeight;
+    showTopButton ? toTopButton.style.display = "block" : toTopButton.style.display = "none"; 
 });
 
+toTopButton.addEventListener("click", event => {
+    window.scrollTo(top);
+});
 /*
 // Nav bar scrolling to section using event
 // Scroll to section on link click
