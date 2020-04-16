@@ -24,6 +24,11 @@ body{
     
 }
 
+.feel {
+    display: grid;
+    grid-template-rows: auto;
+}
+
 .entry{
     background: rgba(59, 74, 107, .4);
 }
