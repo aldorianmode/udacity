@@ -6,7 +6,9 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-console.log(checkForName);
+alert("FUUUUUUU!!");
 
-alert("FUUUUUUU!!")
-console.log("CHANGE!!");
+export {
+    checkForName,
+    handleSubmit
+}
