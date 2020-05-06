@@ -18,9 +18,9 @@
 
 - [X] Response from the API must be added to the view for a user to see
 
-- [ ] Add Service Workers
+- [X] Add Service Workers
 
-- [ ] Be able to show content offline
+- [X] Be able to show content offline
 
 - [ ] Add jest tests
 
