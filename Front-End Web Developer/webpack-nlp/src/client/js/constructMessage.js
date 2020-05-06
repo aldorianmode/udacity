@@ -1,5 +1,7 @@
 function constructMessage(sentimentObj) {
-    console.log("::: Running constructMessage :::");
+    if (sentimentObj.error) {
+        return "Couldn't analyze text. Try again!";
+    }
 
     let msg = "You seem ";
     switch (sentimentObj.subjectivity) {
@@ -12,8 +14,6 @@ function constructMessage(sentimentObj) {
     }
 
     msg = msg.concat(sentimentObj.polarity);
-
-    console.log(`Message analysis = ${msg}`);
     return msg;
 }
 
