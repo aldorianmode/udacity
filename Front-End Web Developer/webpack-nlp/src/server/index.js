@@ -39,8 +39,6 @@ app.get('/test', function (req, res) {
 app.get('/getSentiment', function (req, res) {
     const textToAnalyze = req.query.text;
     textapi.sentiment({ 'text': textToAnalyze }, (error, response) => {
-        console.log('API error = ' + JSON.stringify(error));
-        console.log('API response = ' + JSON.stringify(response));
         const resp = {};
         if (error === null) {            
             resp.error = false;
