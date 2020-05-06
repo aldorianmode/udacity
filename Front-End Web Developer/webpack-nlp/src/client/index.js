@@ -1,4 +1,4 @@
-import { checkForName } from './js/nameChecker'
+import { constructMessage } from './js/constructMessage'
 import { handleSubmit } from './js/formHandler'
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -9,6 +9,6 @@ import './styles/header.scss'
 alert("FUUUUUUU!!");
 
 export {
-    checkForName,
+    constructMessage,
     handleSubmit
 }

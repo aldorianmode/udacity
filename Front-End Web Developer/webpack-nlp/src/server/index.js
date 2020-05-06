@@ -1,5 +1,6 @@
 var path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 const mockAPIResponse = require('./mockAPI.js');
 var aylien = require("aylien_textapi");
 const dotenv = require('dotenv');
@@ -16,6 +17,10 @@ const app = express()
 
 app.use(express.static('dist'))
 
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 console.log(__dirname)
 
 app.get('/', function (req, res) {
@@ -29,4 +34,22 @@ app.listen(8081, function () {
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
+})
+
+app.get('/getSentiment', function (req, res) {
+    const textToAnalyze = req.query.text;
+    textapi.sentiment({ 'text': textToAnalyze }, (error, response) => {
+        console.log('API error = ' + JSON.stringify(error));
+        console.log('API response = ' + JSON.stringify(response));
+        const resp = {};
+        if (error === null) {            
+            resp.error = false;
+            resp.polarity = response.polarity;
+            resp.subjectivity = response.subjectivity;
+        }
+        else {
+            resp.error = true;
+        }
+        res.send(resp);
+    });
 })
