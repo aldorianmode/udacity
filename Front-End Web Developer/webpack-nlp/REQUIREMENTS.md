@@ -14,12 +14,14 @@
 
 - [X] Minify js and styles in the production environment
 
-- [ ] Make one request to the Aylien API
+- [X] Make one request to the Aylien API
 
-- [ ] Response from the API must be added to the view for a user to see
+- [X] Response from the API must be added to the view for a user to see
 
 - [ ] Add Service Workers
 
 - [ ] Be able to show content offline
+
+- [ ] Add jest tests
 
 All of these requirements are explained throughout the course. Specifics on setting up the Aylien API are found in the README file of this repo.
