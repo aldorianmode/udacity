@@ -41,16 +41,20 @@ app.get('/test', function (req, res) {
 })
 
 app.get('/getSentiment', function (req, res) {
-    const textToAnalyze = req.query.text;
-    textapi.sentiment({ 'text': textToAnalyze }, (error, response) => {
+    let paramObj = {};
+    if (req.query.text) {
+        paramObj.text = req.query.text;
+    } else {
+        paramObj.url = req.query.url;
+    }
+    textapi.sentiment(paramObj, (error, response) => {
         const resp = {};
-        if (error === null) {            
+        if (error) {
+            resp.error = true;
+        } else {
             resp.error = false;
             resp.polarity = response.polarity;
             resp.subjectivity = response.subjectivity;
-        }
-        else {
-            resp.error = true;
         }
         res.send(resp);
     });

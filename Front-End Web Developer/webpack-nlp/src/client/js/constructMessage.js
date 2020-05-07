@@ -3,7 +3,7 @@ function constructMessage(sentimentObj) {
         return "Couldn't analyze text. Try again!";
     }
 
-    let msg = "You seem ";
+    let msg = "Seems ";
     switch (sentimentObj.subjectivity) {
         case 'subjective':
             msg = msg.concat("subjectively ");
