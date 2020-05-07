@@ -13,7 +13,7 @@ describe('getSentiment', () => {
 
     it('should fetch data from server', done => {
         const testText = 'This is a test';
-        getSentiment(testText);
+        getSentiment(testText, false /* not url */);
         expect(global.fetch).toHaveBeenCalledTimes(1);
         expect(global.fetch).toHaveBeenCalledWith(`http://localhost:8081/getSentiment?text=${testText}`);
         done();

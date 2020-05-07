@@ -2,15 +2,15 @@ import isEqual from 'lodash/isEqual';
 import { constructMessage } from '../src/client/js/constructMessage';
 
 // Possible output strings
-const SUB_POS_MSG   = "You seem subjectively positive";
-const OBJ_POS_MSG   = "You seem objectively positive";
-const SUB_NEG_MSG   = "You seem subjectively negative";
-const OBJ_NEG_MSG   = "You seem objectively negative";
-const SUB_NEU_MSG   = "You seem subjectively neutral";
-const OBJ_NEU_MSG   = "You seem objectively neutral";
-const POS_MSG       = "You seem positive";
-const NEG_MSG       = "You seem negative";
-const NEU_MSG       = "You seem neutral";
+const SUB_POS_MSG   = "Seems subjectively positive";
+const OBJ_POS_MSG   = "Seems objectively positive";
+const SUB_NEG_MSG   = "Seems subjectively negative";
+const OBJ_NEG_MSG   = "Seems objectively negative";
+const SUB_NEU_MSG   = "Seems subjectively neutral";
+const OBJ_NEU_MSG   = "Seems objectively neutral";
+const POS_MSG       = "Seems positive";
+const NEG_MSG       = "Seems negative";
+const NEU_MSG       = "Seems neutral";
 const ERR_MSG       = "Couldn't analyze text. Try again!";
 
 // Possible sentiment object values (similar to https://docs.aylien.com/textapi/endpoints/#sentiment-analysis). Check
