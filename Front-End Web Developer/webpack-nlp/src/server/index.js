@@ -53,6 +53,7 @@ app.get('/getSentiment', function (req, res) {
             resp.error = true;
         } else {
             resp.error = false;
+            resp.text = response.text;
             resp.polarity = response.polarity;
             resp.subjectivity = response.subjectivity;
         }
