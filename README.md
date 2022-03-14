@@ -1,2 +1,2 @@
 # Udacity
-Work related to Nanodegree's
+Work related to Nanodegrees
